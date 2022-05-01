@@ -40,6 +40,6 @@ Again, we have to encrypt these information in order to make sure that these inf
 <p>This type of cryptography uses just a single key. So the same key is used 
 both for encryption and decryption as well this is why it also called symmetric encryption
 </p>
-<b>THE MAIN PROBLEM IS THAT THE KEY MUST BE EXCHANGED!!!
+<b>⚠THE MAIN PROBLEM IS THAT THE KEY MUST BE EXCHANGED⚠
 </b>
 <img src="./src/Symmetric.PNG">
