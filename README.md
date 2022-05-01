@@ -32,5 +32,14 @@ Again, we have to encrypt these information in order to make sure that these inf
 </u></p>
 <b>Encryption:</b> cipher_text=(plain_text,key);<br>
 <b>Decryption:</b> plain_text=f<sup>-1</sup>(cipher_text,key);
-
-
+<br>
+<b>Symmetric Encryption
+</b><br>
+<b>PRIVATE KEY CRYPTOGRAPHY
+</b>
+<p>This type of cryptography uses just a single key. So the same key is used 
+both for encryption and decryption as well this is why it also called symmetric encryption
+</p>
+<b>THE MAIN PROBLEM IS THAT THE KEY MUST BE EXCHANGED!!!
+</b>
+<img src="./src/Symmetric.PNG">
