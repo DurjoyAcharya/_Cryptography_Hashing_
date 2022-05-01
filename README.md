@@ -43,3 +43,11 @@ both for encryption and decryption as well this is why it also called symmetric 
 <b>⚠THE MAIN PROBLEM IS THAT THE KEY MUST BE EXCHANGED⚠
 </b>
 <img src="./src/Symmetric.PNG">
+<br><b>Asymmetric Encryption:</b><br>
+<b>PUBLIC KEY CRYPTOGRAPHY</b><br>
+<p>This type of cryptography uses  a public key and a private key as well.
+for this is why it is also called asymmetric encryption
+👉We should keep the private key secret
+👉if <b>Durjoy</b> wants to send a message to <b>Rupkotha</b> then <b>Durjoy</b> will encrypt it with
+<b>Rupkotha</b>'s public key and <b>Rupkotha</b> can decrypt the message with its private key</p>
+<img src="src/Asymmetric.PNG">
