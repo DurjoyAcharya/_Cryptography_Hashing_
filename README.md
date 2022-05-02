@@ -51,3 +51,7 @@ for this is why it is also called asymmetric encryption
 👉if <b>Durjoy</b> wants to send a message to <b>Rupkotha</b> then <b>Durjoy</b> will encrypt it with
 <b>Rupkotha</b>'s public key and <b>Rupkotha</b> can decrypt the message with its private key</p>
 <img src="src/Asymmetric.PNG">
+<br>
+<b>Symmentric Cryptography Algorithms</b>
+<br>
+👉 <a src="https://en.wikipedia.org/wiki/Caesar_cipher#:~:text=The%20Caesar%20cipher%20is%20named%20after%20Julius%20Caesar%2C%20who%2C%20according,protect%20messages%20of%20military%20significance.">Caesar-Cipher</a>
