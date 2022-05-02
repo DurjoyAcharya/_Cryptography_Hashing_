@@ -54,4 +54,29 @@ for this is why it is also called asymmetric encryption
 <br>
 <b>Symmentric Cryptography Algorithms</b>
 <br>
-👉 [Caesar-Cipher] (https://en.wikipedia.org/wiki/Caesar_cipher)
+👉 [Caesar-Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+<br>
+<h2>Caesar-Cipher</h2>
+<h3>Encryption</h3>
+<h4>Formula behind the scane </h4>
+<h3>E<sub>n</sub>(x)=(x+n) mod 26</h3>
+👉We have to consider all the characters in the plaintext
+
+👉E(x) is the encrypted letter of the original x letter
+
+👉We have to shift the given letter with n (where n is the key)
+
+⚠Why to use 26 ? 
+
+✅The size of alphabet is 27 which means there are 26 letter in the english alphabet
+
+✅We want to make sure the encrypted letter is within the range[0,SIZE_ALPHABET-1] so this is why to use mod 26 here.
+<h3>Decryption</h3>
+<h4>Formula behind the scene</h4>
+<h3>E<sub>n</sub>(x)=(x-n) mod 26</h3>
+
+👉 We have to consider all the characters in the ciphertext
+
+👉 D(x) is the decrypted letter(x  is the letter in the ciphertext)
+
+👉 We have to shift the given letter with -n (where n is the key)
