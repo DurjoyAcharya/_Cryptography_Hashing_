@@ -1,57 +1,34 @@
 package CaesarCipher;
 
-import java.util.HashMap;
-import java.util.Set;
 
 public class Caesarcipher {
-    private HashMap<Integer,Character> hashMap;
-    public String intToRoman(int num) {
-        int[] arr={1,4,5,9,10,40,50,90,100,400,500,900,1000};
-        String[] str={"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
-        int i= arr.length-1;
-        String ans="";
-        while (num>0)
-        {
-            int div=num/arr[i];
-            num=num%arr[i];
-            while (div>0)
-            {
-                ans+=str[i];
-                div--;
-            }
-            i--;
-        }
-        return ans;
-    }
-    private String encrypt(String message)
-    {
-        String string="";
-        for (int i = 0; i < message.length(); i++) {
-
-        }
-
-        return string;
-    }
+    private final String ALPHABET=" ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private  String EncryptMessages(String message,int key)
     {
-        char i;
-        int k;
-        hashMap=new HashMap<>();
-        for ( i= 'A', k=0; k<26 && i <='Z';k++, i++) {
-            hashMap.put(k,i);
+        String CipherText="";
+        message=message.toUpperCase();
+        for (int i = 0; i < message.length(); i++) {
+            char character=message.charAt(i);
+            int charIndex=ALPHABET.indexOf(character);
+            int encryptedIndex=(charIndex+key)%ALPHABET.length();
+            CipherText+=ALPHABET.charAt(encryptedIndex);
         }
-
-        for (int j = 0; j < message.length(); j++) {
-
+        return CipherText;
+    }
+    private  String DecryptMessages(String message,int key)
+    {
+        String CipherText="";
+        message=message.toUpperCase();
+        for (int i = 0; i < message.length(); i++) {
+            char character=message.charAt(i);
+            int charIndex=ALPHABET.indexOf(character);
+            int encryptedIndex=(charIndex-key)%ALPHABET.length();
+            CipherText+=ALPHABET.charAt(encryptedIndex);
         }
-
-
-        hashMap.forEach((x,y)->{
-            System.out.println(x+"-"+y);
-        });
-        return null;
+        return CipherText;
     }
     public static void main(String[] args) {
-        new Caesarcipher().EncryptMessages("",9);
+        System.out.println(new Caesarcipher().EncryptMessages("ABC",5));
+        System.out.println(new Caesarcipher().DecryptMessages("FGH",5));
     }
 }
