@@ -35,5 +35,6 @@ class CaesarCipher {
     }
 }
 let caesarcipher=new CaesarCipher();
-let value=caesarcipher._EncryptMessage("ABC",5);
+let value=caesarcipher._EncryptMessage("I LOVE YOU",5);
 console.log(value);
+console.log(caesarcipher._DecryptMessage("N%QT[J%^TZ",5));
