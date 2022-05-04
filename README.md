@@ -86,26 +86,26 @@ for this is why it is also called asymmetric encryption
 possible key values
 ~the keyspace is small: it contains 26 keys only!!
 <br>
-_NUMBER OF KEYS=SIZE OF THE ALPHABET_
+<b>NUMBER OF KEYS=SIZE OF THE ALPHABET</b>
 <br>
 👉 there are 26 letters in the alphabet so the number of possible keys is as well
 <br>
 👉 intuition:let's use Caesar-encryption several times (brute-force approach)
 <br>
-_**CAESAR-CIPHER WILL NOT BE MORE SECURE IF WE REPEAT THE OPERATION**_<br>
+<b>CAESAR-CIPHER WILL NOT BE MORE SECURE IF WE REPEAT THE OPERATION</b><br>
 >For example: using Caesar-encryption with key 2 and then with key 3 is the same as using key 5
 In our implementation we use 26 letters as the english alphabet
 We Can use brute force attack in order to find the key for the Caesar-cipher
 
 <br>
 <b>There are 2 types of approaches to crack Caesar-cipher</b><br>
-1. **Brute-force attack**:because the number of possible key is 26 thats why we can consider all
+1. <b>Brute-force attack</b>:because the number of possible key is 26 thats why we can consider all
    these cases (so check all the possible key values)
 <br>
    👉 we use all the posssible key values within the range[0,SIZE_ALPHABET-1]
    and check whether the decrypted message makes sense or not
    ~it may be important to be able to detect english language
-2. **Frequency-analysis**: we can analyse the frequency distribution of the letters
+2. <b>Frequency-analysis</b>: we can analyse the frequency distribution of the letters
    For example in an english language text some letters are more
    frequent then others(E,A,O,I and T)<br>
    👉 we can analyse the ciphertext and based on the most frequent letter
