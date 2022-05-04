@@ -111,3 +111,18 @@ We Can use brute force attack in order to find the key for the Caesar-cipher
    👉 we can analyse the ciphertext and based on the most frequent letter
    in the ciphertext we can predict the key(so the number of shift)
 
+<br>
+<h2>Relative frequency distribution of letters in an english text</h2>
+<br>
+<img src="ref.jpg">
+<br>
+<h3>Frequency analysis cracking</h3>
+<blockquote>
+<p>1. calculate the relative frequency distribution of the ciphertext's letters</p>
+<p>2. get the most frequent letter in the ciphertext (or the second because the most frequent one may be white-spaces)
+</p>
+<p>3. we can get the key based on a simple formula 
+</p>
+<strong>key=value of ciphertext's most frequent letter-value of E
+</strong>
+</blockquote>
