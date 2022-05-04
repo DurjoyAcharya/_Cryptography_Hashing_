@@ -80,3 +80,36 @@ for this is why it is also called asymmetric encryption
 👉 D(x) is the decrypted letter(x  is the letter in the ciphertext)
 
 👉 We have to shift the given letter with -n (where n is the key)
+<br>
+**Cracking Caesar-cipher**
+>The main problem with Caesar-cipher is that there are few
+possible key values
+~the keyspace is small: it contains 26 keys only!!
+<br>
+>
+_NUMBER OF KEYS=SIZE OF THE ALPHABET_
+<br>
+👉 there are 26 letters in the alphabet so the number of possible keys is as well
+<br>
+👉 intuition:let's use Caesar-encryption several times (brute-force approach)
+<br>
+_**CAESAR-CIPHER WILL NOT BE MORE SECURE IF WE REPEAT THE OPERATION**_
+>For example: using Caesar-encryption with key 2 and then with key 3 is the same as using key 5
+In our implementation we use 26 letters as the english alphabet
+We Can use brute force attack in order to find the key for the Caesar-cipher
+<
+<br>
+**There are 2 types of approaches to crack Caesar-cipher**
+>
+1. **Brute-force attack**:because the number of possible key is 26 thats why we can consider all
+   these cases (so check all the possible key values)
+<br>
+   👉 we use all the posssible key values within the range[0,SIZE_ALPHABET-1]
+   and check whether the decrypted message makes sense or not
+   ~it may be important to be able to detect english language
+2. **Frequency-analysis**: we can analyse the frequency distribution of the letters
+   For example in an english language text some letters are more
+   frequent then others(E,A,O,I and T)<br>
+   👉 we can analyse the ciphertext and based on the most frequent letter
+   in the ciphertext we can predict the key(so the number of shift)
+
