@@ -104,7 +104,7 @@ We Can use brute force attack in order to find the key for the Caesar-cipher
 <br>
    👉 we use all the posssible key values within the range[0,SIZE_ALPHABET-1]
    and check whether the decrypted message makes sense or not
-   ~it may be important to be able to detect english language
+   ~it may be important to be able to detect english language<br>
 2. <b>Frequency-analysis</b>: we can analyse the frequency distribution of the letters
    For example in an english language text some letters are more
    frequent then others(E,A,O,I and T)<br>
