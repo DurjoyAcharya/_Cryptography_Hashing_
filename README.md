@@ -126,3 +126,13 @@ We Can use brute force attack in order to find the key for the Caesar-cipher
 <strong>key=value of ciphertext's most frequent letter-value of E
 </strong>
 </blockquote>
+<u>We are able to crack Caesar-cipher  because some imformation is revealed about the cryptosystem
+</u>
+<br>
+<strong>THIS IS CALLED INFORMATION LEAKING!!!
+</strong>
+<blockquote>
+<p>👉Because of the information leaking we can analyise cipertexts and crack the given cipher<br>
+👉Information leaking can be avoid by using <strong>random numbers</strong>
+	this is why one-time-pad(OTP) came to be </p>
+</blockquote>
