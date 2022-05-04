@@ -86,21 +86,19 @@ for this is why it is also called asymmetric encryption
 possible key values
 ~the keyspace is small: it contains 26 keys only!!
 <br>
->
 _NUMBER OF KEYS=SIZE OF THE ALPHABET_
 <br>
 👉 there are 26 letters in the alphabet so the number of possible keys is as well
 <br>
 👉 intuition:let's use Caesar-encryption several times (brute-force approach)
 <br>
-_**CAESAR-CIPHER WILL NOT BE MORE SECURE IF WE REPEAT THE OPERATION**_
+_**CAESAR-CIPHER WILL NOT BE MORE SECURE IF WE REPEAT THE OPERATION**_<br>
 >For example: using Caesar-encryption with key 2 and then with key 3 is the same as using key 5
 In our implementation we use 26 letters as the english alphabet
 We Can use brute force attack in order to find the key for the Caesar-cipher
-<
+
 <br>
-**There are 2 types of approaches to crack Caesar-cipher**
->
+<b>There are 2 types of approaches to crack Caesar-cipher</b><br>
 1. **Brute-force attack**:because the number of possible key is 26 thats why we can consider all
    these cases (so check all the possible key values)
 <br>
