@@ -1,8 +1,9 @@
 //Here i take alphabet veriable for to convert letter to numerical values
-const ALPHABET = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//Vigenère Cipher
 class VigenerCipher {
+  ALPHABET = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   constructor() {}
-  public vigenerEncrypt(message: any, key: string): string {
+  public vigenerEncrypt(message: string, key: string): string {
     //This is the text that we want to encrypt
     message = message.toUpperCase();
     key = key.toUpperCase();
@@ -11,17 +12,17 @@ class VigenerCipher {
     let key_index = 0;
     let index = 0;
     for (const i of message) {
-      index =
-        (ALPHABET.indexOf(i) + ALPHABET.indexOf(key[key_index])) %
-        ALPHABET.length;
+      index = (this.ALPHABET.indexOf(i) + this.ALPHABET.indexOf(key[key_index])) % this.ALPHABET.length;
       //   console.log(index);
-      cipher_text += ALPHABET.charAt(index);
+      cipher_text += this.ALPHABET.charAt(index);
       key_index++;
       if (key_index === key.length) key_index = 0;
+
     }
     return cipher_text;
   }
-  public _decryption(message: any, key: string): string {
+  public vigenerDecrypt(message: string, key: string): string {
+    //This is the text that we want to encrypt
     message = message.toUpperCase();
     key = key.toUpperCase();
     let cipher_text = " ";
@@ -29,23 +30,21 @@ class VigenerCipher {
     let key_index = 0;
     let index = 0;
     for (const i of message) {
-      index =
-        (ALPHABET.indexOf(i) - ALPHABET.indexOf(key[key_index])) %
-        ALPHABET.length;
+      index = (this.ALPHABET.indexOf(i) - this.ALPHABET.indexOf(key[key_index])) % this.ALPHABET.length;
       //   console.log(index);
-      cipher_text += ALPHABET.charAt(index);
+      cipher_text += this.ALPHABET.charAt(index);
       key_index++;
       if (key_index === key.length) key_index = 0;
+
     }
     return cipher_text;
-
-    return " ";
   }
+
 }
 //Testing Perpose
 let obj = new VigenerCipher();
 //console.log(obj.vigenerEncrypt("this is just an example", "secret"));
-let sms = obj.vigenerEncrypt("this is just an example", "secret");
-console.log(sms);
-let msm = obj._decryption(sms, "secret");
-console.log(msm);
+let sms = obj.vigenerEncrypt("Bangladesh", "secret");
+ console.info(sms);
+let msm = obj.vigenerDecrypt("UFQYQUWJVZ", "secret");
+ console.info(msm);
