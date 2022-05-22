@@ -1,0 +1,69 @@
+<h1><center>Cracking Vigener Cipher</center></h1>
+<p>
+  Cracking Vigener Cipher is more harder than the Cracking Caesar Cipher The
+  Complexity of Cracking a Cipher is proportional to the size of keySpace
+  <p>Caesar cipher keySpace is 26</p>
+  <p>Vigener Cipher keySpace is 26<sup>size of the key</sup></p>
+</p>
+<u>
+    <ul>Now We Can Use <b>Directory attack</b>: so we have a dictionary(file containing the words)
+    and use the words as possible keys(It is like brute force attack)</ul>
+    <ul><b>Kasisky-algorithm</b> is smarter way to crack Vigener cipher</ul>
+</u>
+<h1><center>Kasisky-algorithm</center></h1>
+<p>Mathematical Cryptography began when Friedrich Kasiski published a method of
+    breaking Vigenere-Belaso ciphers in 1863
+    </p>
+    <p>The fundamental weakness of a Vigenere-Belaso cipher is that if the keylength is known,the ciphertext can be split apart into individual shift ciphers
+        So security relies on having thekeylength is known <br>
+        <br>
+        <b>Finding the keylength</b>
+        </p>
+        <h2>Kasiski's insight was the following:
+        </h2>
+        <p>->There are common bigrams and trigrams in the plaintext: TH, MM, RE <br>
+            ->From time to time,two occurrences of a bigram/trigram will be separated by an exact multiple of the keylength
+            This suggestes: <br>
+            ->Finding the common bigrams and trigrams in the ciphertext <br>
+            ->Find the distance between them <br>
+            ->This distance maybe a multiple of the keylength <br> <br></p>
+            <b>NB:</b> If we know the size of the key then we can use frequency analysis in order to decrypt a vigen ciphertext
+            <h1>AGAIN WE TAKE THE ADVANTAGE OF THE INFORMATION LEAKING~~</h1>
+            <h3><u>Process</u></h3>
+            <p>
+                1) we have to find the size of the key:we can analyse repeated substrings and their factors to get a good guess <br>
+2) we can construct substrings from the ciphertext that are encrypted by the same letters <br>
+3) we can use frequency analysis to find the letters of the key <br>
+            </p>
+
+<p>First we have to find repeacted substrings in the ciphertext(the size of these substrings are at least 3 letters long)
+   <br> Second step is to consider the distances between these repeated substrings and find the factors of these values
+   <br> <b>Kasiski-algorithm</b> assumes that length of the key is the factor with the hightest count.
+    </p>
+    <h1>Algorithm</h1>
+<ol>
+    <li>We have to find the size of the key:we can analyse repeated substrings
+        and their factors to get a good guess
+        </li>
+        <li>We can construct substrings from the ciphertext that are encrypted by same letters
+        </li>
+        <li>We can use frequency analysis to find the letters of the key</li>
+</ol>
+
+<p>
+    If we know the size of the key then we can use frequency analysis because Vigenere cipher is the same as Caesar cipher
+       <br> ~of course it uses multiple subkeys
+</p>
+<p>
+    <br>
+    👉if the the length of the key is N then we know that every N-th letter must have been encrypted using the same subkey
+   <br> 👉so we create substrings containging every N-th letter
+       <br>    ~there will be N substrings after this operation
+
+</p>
+
+            <style>
+            *{
+                background-color: gray;
+            }
+            </style>
