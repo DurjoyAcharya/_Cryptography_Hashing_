@@ -8,6 +8,7 @@ public class RandomGenerator {
     public RandomGenerator() {
        random = new Random();
     }
+
     public int[] generator(int n)
     {
         int[] randomSequence=new int[n];
